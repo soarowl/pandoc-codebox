@@ -1,0 +1,46 @@
+\documentclass[cn]{elegantbook}
+
+\usepackage{codebox}
+\codeset{pretitle=示例}
+
+\newcommand\restorespace{
+    \xeCJKsetup{CJKecglue = { }, xCJKecglue = false}
+}
+
+\newcommand\removespace{
+    \xeCJKsetup{CJKecglue = {}, xCJKecglue = false}
+}
+
+\usepackage[export]{adjustbox}% http://ctan.org/pkg/adjustbox
+% Resize figures that are too wide for the page.
+\let\oldincludegraphics\includegraphics
+\renewcommand\includegraphics[2][]{%
+  \oldincludegraphics[#1,max width=1\paperwidth,max height=1\paperheight,keepaspectratio]{#2}
+}
+
+$if(author)$
+\author{$for(author)$$author$$sep$\\$endfor$}
+$endif$
+$if(cover)$
+\cover{$cover$}
+$endif$
+$if(date)$
+\date{$date$}
+$endif$
+$if(title)$
+\title{$title$}
+$endif$
+
+\begin{document}
+
+\maketitle
+
+\frontmatter
+
+\tableofcontents
+
+\mainmatter{}
+
+$body$
+
+\end{document}
