@@ -1,7 +1,12 @@
 ---
-author: "卓能文"
-date: "2022年6月1日"
-title: "codebox 测试"
+author: 卓能文
+date: last-modified
+format:
+    html:
+        self-contained: true
+        standalone: true
+lang: zh
+title: codebox 测试
 ---
 
 ```{.java .numberLines #lst-demo caption="demo title"}
@@ -105,7 +110,7 @@ class DemoApplicationTests {
 }
 ```
 
- 
+
 ```{.java .numberLines #lst-demo2 caption="demo title2" comments="This is very long comment."}
 package com.example.demo;
 
